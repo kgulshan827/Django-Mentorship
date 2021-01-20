@@ -1,0 +1,19 @@
+<h1>Article Creation Form</h1>
+<p>Fill in the form to create an Article</p>
+<br><br><br>
+<form action="{% url 'create' %}" method="post" enctype="multipart/form-data">
+    <label>Title:&nbsp;</label>
+    {{ form.title }}
+    <br>
+    <br>
+    <label>Author:&nbsp;</label>
+    {{ form.author }}
+    <br>
+    <br>
+    <label>Body:&nbsp;</label>
+    {{ form.body }}
+    {% csrf_token %}
+    <br>
+    <br>
+    <input type="submit" value="Save">
+</form>

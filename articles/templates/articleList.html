@@ -1,0 +1,13 @@
+<h1>Article List</h1>
+<p>Displays list of articles</p>
+
+<br>
+
+{% for article in articles %}
+    <div>
+        <h2>{{ article.title | title }}</h2>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;By: {{ article.author | upper }} on {{article.date}} </h4>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ article.body }}</p>
+    </div>
+    <br><br>
+{% endfor %}

@@ -2,7 +2,15 @@
 <p>Displays list of articles</p>
 
 <br>
+<div>
+    <ul>
+        <a href="{% url 'signup' %}">Signup</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'logout' %}">Logout</a>
 
+
+    </ul>
+</div>
 {% for article in articles %}
     <div>
         <h2>{{ article.title | title }}</h2>
